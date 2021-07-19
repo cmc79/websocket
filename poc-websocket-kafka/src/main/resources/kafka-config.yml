@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    consumer:
+      # group-id: test
+      auto-offset-reset: earliest
+      key-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      #properties:
+      #  spring:
+      #    json:
+      #      trusted:
+      #        packages: com.faut.test.testarchitecture.domain.api.dto

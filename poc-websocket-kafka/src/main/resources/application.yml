@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    domain: 'com.stlc.poc.model'
+    topic:
+      input: messages-topic
+    consumer:
+      bootstrap-servers: 'localhost:9093'
+      properties:
+        bootstrap-servers: 'localhost:9093'
+        spring.json.trusted.packages: "com.stlc.poc.model"
+        spring.json.value.default.type: "com.stlc.poc.model.MessageRequest"
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "org.springframework.kafka.support.serializer.JsonDeserializer"                  
+
+
+
+
